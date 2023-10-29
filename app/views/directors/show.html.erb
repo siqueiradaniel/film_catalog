@@ -1,0 +1,33 @@
+<h1><%=@director.name%></h1>
+
+<div>
+    <%=link_to "Editar diretor", edit_director_path%>
+</div>
+
+<div>
+    <h3>Informações sobre diretor</h3>
+    <ul>
+        <li>
+            <strong>Nacionalidade:</strong> <%=@director.nationality%>
+        </li>
+        <li>
+            <strong>Data de nascimento:</strong> <%=@director.birth_date%>
+        </li>
+        <li>
+            <strong>Gênero favorito:</strong> <%=@director.favorite_genre%>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3>Lista de Filmes</h3>
+    <ul>
+        <!-- How do we define that director has_many films in model 
+        -- @director.film has a list of all films that belong to the director -->
+        <% @director.film.each do |film| %>
+            <li>
+                <%= link_to film.title, film_path(film.id)%>
+            </li>
+        <% end %>
+    </ul>
+</div>

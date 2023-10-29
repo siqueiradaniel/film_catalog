@@ -1,12 +1,13 @@
 <h1><%=@genre.name%></h1>
 
 <div>
-    <%=link_to "Editar #{@genre.name}", edit_genre_path%>
+    <%=link_to "Editar gênero", edit_genre_path%>
 </div>
 
 <div>
+    <h3>Lista de Filmes</h3>
     <ul>
-        <!-- How do we define what genre has_many film in model 
+        <!-- How do we define that genre has_many films in model 
         -- @genre.film has a list of all films that belong to the genre -->
         <% @genre.film.each do |film| %>
             <li>

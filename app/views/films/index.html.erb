@@ -1,0 +1,13 @@
+<h1>Filmes</h1>
+
+<div>
+    <%=link_to 'Criar novo filme', new_film_path%>
+</div>
+
+<ul>
+    <% @films.each do |film| %>
+        <li>
+            <%= link_to film.title, film_path(film.id) %>
+        </li>
+    <% end %>
+</ul>

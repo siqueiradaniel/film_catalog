@@ -1,0 +1,13 @@
+<h1>Diretores</h1>
+
+<div>
+    <%=link_to 'Criar novo diretor', new_director_path%>
+</div>
+
+<ul>
+    <% @directors.each do |director| %>
+        <li>
+            <%= link_to director.name, director_path(director.id) %>
+        </li>
+    <% end %>
+</ul>

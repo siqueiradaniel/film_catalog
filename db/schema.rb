@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_29_171723) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_29_205136) do
   create_table "directors", force: :cascade do |t|
     t.string "name"
     t.string "nationality"
-    t.date "birth_date"
+    t.string "birth_date"
     t.string "favorite_genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

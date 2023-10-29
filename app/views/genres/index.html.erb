@@ -5,9 +5,9 @@
 </div>
 
 <ul>
-<% @genres.each do |genre| %>
-    <li>
-        <%= link_to genre.name, genre_path(genre.id) %>
-    </li>
-<% end %>
+    <% @genres.each do |genre| %>
+        <li>
+            <%= link_to genre.name, genre_path(genre.id) %>
+        </li>
+    <% end %>
 </ul>

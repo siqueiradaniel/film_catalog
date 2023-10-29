@@ -1,0 +1,32 @@
+<h1><%=@film.title%></h1>
+
+<div>
+    <%=link_to "Editar filme", edit_film_path%>
+</div>
+
+<div>
+    <h3>Informações sobre o filme</h3>
+    <ul>
+        <li>
+            <strong>Título:</strong> <%=@film.title%>
+        </li>
+        <li>
+            <strong>Ano de Lançamento:</strong> <%=@film.release_year%>
+        </li>
+        <li>
+            <strong>Sinopse:</strong> <%=@film.synopsis%>
+        </li>
+        <li>
+            <strong>País de origem:</strong> <%=@film.origin_country%>
+        </li>
+        <li>
+            <strong>Duração:</strong> <%=@film.duration%>
+        </li>
+        <li>
+            <strong>Diretor:</strong> <%=@film.director.name%>
+        </li>
+        <li>
+            <strong>Gênero:</strong> <%=@film.genre.name%>
+        </li>
+    </ul>
+</div>
