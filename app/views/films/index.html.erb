@@ -8,6 +8,7 @@
     <% @films.each do |film| %>
         <li>
             <%= link_to film.title, film_path(film.id) %>
+            <%= "(#{film.release_year})"%>
         </li>
     <% end %>
 </ul>
