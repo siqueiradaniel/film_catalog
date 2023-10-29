@@ -1,7 +1,13 @@
-<h1> Generos </h1>
+<h1>Generos</h1>
 
+<div>
+    <%=link_to 'Criar novo genero', new_genre_path%>
+</div>
+
+<ul>
 <% @genres.each do |genre| %>
-    <div>
+    <li>
         <%= link_to genre.name, genre_path(genre.id) %>
-    </div>
+    </li>
 <% end %>
+</ul>
